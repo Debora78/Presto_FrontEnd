@@ -1,0 +1,86 @@
+:root{
+    --color-p: rgb( 250, 240, 230); /* Bianco Caldo per Sfondo */
+    --color-t: rgb( 85, 107, 47);   /* Verde Oliva Scuro per Titolo Principale e testi*/
+    --color-btn: rgb( 226, 114, 91);   /* Terracotta per bottoni */
+    --color-link: rgb( 176, 224, 230);   /* Blu polvere per link */
+    --color-nav-footer: rgb( 169, 189, 191);   /*Verde Salvia Denaturato per Navbar e Footer */
+    --color-a: rgb( 255, 218, 185);   /* accento */
+    
+} 
+.color-p{
+    color: var(--color-p);
+}
+.color-t{
+    color: var(--color-t);
+}
+.color-btn{
+    color: var(--color-btn);
+}
+.color-link{
+    color: var(--color-link);
+}
+.color-nav-footer{
+    color: var(--color-nav-footer);
+}
+.color-a{
+    color: var(--color-a);
+}
+
+
+body{
+    background-color: var(--color-p);
+}
+
+/* HEADER */
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/Foto_Header.jpeg");
+}
+
+/* BTN */
+.btn-custom{
+    background-color: transparent;
+    outline-color: var(--color-btn);
+    color: var(--color-p);
+    border: 2px solid var(--color-btn);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer; /* Trasforma il cursore in una mano */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Aggiunge un'ombra leggera */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Aggiunge una transizione fluida per l'ombra e il movimento */
+    
+}
+.btn-custom:hover {
+    background-color: var(--color-btn); /* Cambia il colore di sfondo */
+    color: white; /* Cambia il colore del testo */
+    border-color: white; /* Cambia il colore del bordo (opzionale) */
+    /* Potresti aggiungere anche altre modifiche, come un'ombra, un cambio di opacità, ecc. */
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3); /* Ombra leggermente più intensa al passaggio del mouse */
+    transform: translateY(-1px); /* Leggero sollevamento al passaggio del mouse */
+  }
+
+
+
+.titolo {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: bold;
+    font-weight: 800;
+    font-style: italic;
+    
+  }
+
+  *{
+    font-family: "Nunito Sans", sans-serif;
+    font-size: semi-bold;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  
+  .link{
+    font-family: "Nunito Sans", sans-serif;
+    font-size: regular;
+    font-weight: 400;
+    font-style: normal;
+  }
