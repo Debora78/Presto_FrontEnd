@@ -3,8 +3,9 @@
     --color-t: rgb( 85, 107, 47);   /* Verde Oliva Scuro per Titolo Principale e testi*/
     --color-btn: rgb( 226, 114, 91);   /* Terracotta per bottoni */
     --color-link: rgb( 176, 224, 230);   /* Blu polvere per link */
-    --color-nav-footer: rgb( 169, 189, 191);   /*Verde Salvia Denaturato per Navbar e Footer */
+    --color-s: rgb( 169, 189, 191);   /*Verde Salvia Denaturato secondario */
     --color-a: rgb( 255, 218, 185);   /* accento */
+    --color-nav-footer: rgb( 117, 145, 108);
     
 } 
 .color-p{
@@ -31,9 +32,47 @@ body{
     background-color: var(--color-p);
 }
 
+.logo{
+    border-radius: 50%;
+    
+}
+
+nav{
+    background-color: rgba(117, 145, 108, 0.726);
+    border-bottom: var(--color-a) 2px solid;
+    
+}
+
+.testo{
+    color: var(--color-link);
+    font-weight: bold;
+}
+
+/* NAVBAR */
+.nav-scrolled{
+margin: 5vh 15vw;
+border: 2px solid var(--color-a);
+border-radius: 10px;
+backdrop-filter: blur(7px);
+background-color:  rgba(169, 189, 191, 0.301);
+
+}
+
+.transition{
+    transition: .5s;
+}
+
+
+
+    
 /* HEADER */
 header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("media/Foto_Header.jpeg");
+}
+
+/* TITOLI */
+.title{
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* BTN */
