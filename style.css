@@ -71,7 +71,7 @@ header{
 }
 
 /* TITOLI */
-.title{
+.title-shadow{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -111,15 +111,32 @@ header{
 
   *{
     font-family: "Nunito Sans", sans-serif;
-    font-size: semi-bold;
+    font-size: bold;
     font-weight: 600;
-    font-style: normal;
+    font-style: italic;
   }
   
   
   .link{
     font-family: "Nunito Sans", sans-serif;
-    font-size: regular;
+    font-size: bold;
     font-weight: 400;
-    font-style: normal;
+    font-style: italic;
+  }
+
+  /* BORDO */
+  .bordo{
+    border-bottom: 2px solid var(--color-t);
+}
+
+  /* CATEGORIE */
+  .box-category{
+    border-radius: 50%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-t);
+    border: 2px solid var(--color-a);
+
   }
