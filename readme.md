@@ -17,3 +17,5 @@
     - Evento Scroll
     - Aos
     - Chiamate Asincrone (setInterval)
+    - Intersection Observer
+    - Ultimi 3 Annunci
