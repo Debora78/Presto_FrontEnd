@@ -56,3 +56,75 @@ let osservatore = new IntersectionObserver((entries) => {
 });
 
 osservatore.observe(numPiante);
+
+//!Array di ultimi prodotti
+let products = [
+  // 🌸 Fiori
+  {
+    nome: "Rosa Rossa",
+    categoria: "fiore",
+    prezzo: 5.99,
+    img: "./media/rose_rosse.jpg"
+  },
+  {
+    nome: "Tulipano Arancio",
+    categoria: "fiore",
+    prezzo: 3.50,
+    img: "./media/tulipani_arancio.jpg"
+  },
+  {
+    nome: "Girasole",
+    categoria: "fiore",
+    prezzo: 4.20,
+    img: "./media/girasoli.jpg"
+  },
+
+  // 🌿 Piante
+  {
+    nome: "Ficus",
+    categoria: "pianta",
+    prezzo: 15.00,
+    img: "./media/ficus.jpg"
+  },
+  {
+    nome: "Aloe Vera",
+    categoria: "pianta",
+    prezzo: 7.99,
+    img: "./media/aloe_vera.jpg"
+  },
+  {
+    nome: "Aloe Ferox",
+    categoria: "pianta",
+    prezzo: 12.50,
+    img: "./media/aloe_ferox.jpg"
+  }
+];
+
+//! Catturo il contenitore (in questo caso è la row)
+let cardsWrapper = document.querySelector("#cardsWrapper");
+//!creo le colonne per le cards
+products.forEach( (product, i) => { //la i l'indice del foreach che mi serve per avere un punto di riferimento
+
+  if (i >= products.length - 3 ) {//la i è l'indice che cicla gli elementi dell'array.
+    //*se l'indice (i) è maggiore della lunghezza dell'array - 3, allora creo la card.
+    //! l'indice i è > di 0 ? no quindi non entra nella if e va avanti 
+
+    let div = document.createElement("div")//creo il div che corrisponde alla colonna per ogni elemento dell'array
+    div.classList.add("col-12", "col-md-3", "mt-5")//*Aggiungo la classe col-12, col-md-3, mt-5 (classi per la colonna)
+   //*Inserisco il codice HTML dentro il div cioè la card
+    div.innerHTML = `  
+             <div class="card">
+              <img src=${product.img} class="card-img-top" alt="img delle cards">
+              <div class="card-body">
+                <h5 class="card-title">${product.nome}</h5>
+                <p class="card-text">Categoria: ${product.categoria}.</p>
+                <p class="card-text">Prezzo: ${product.prezzo}.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+  `
+  cardsWrapper.appendChild(div);//*appendo al contenitore il div con la card creata (l'appendchild() si mette sempre al contenitore
+  }
+    
+  })
+ 
