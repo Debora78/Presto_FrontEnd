@@ -128,3 +128,4 @@ products.forEach( (product, i) => { //la i l'indice del foreach che mi serve per
     
   })
  
+  
