@@ -1,0 +1,40 @@
+[
+    {"name":"girasole", "categoria":"fiore da giardino", "prezzo":"18", "img":"https://picsum.photos/200"},
+    {"name":"margherita", "categoria":"fiore da giardino", "prezzo":"10", "img":"https://picsum.photos/200"},
+    {"name":"papavero", "categoria":"fiore da giardino", "prezzo":"12", "img":"https://picsum.photos/200?r"},
+    {"name":"narciso", "categoria":"fiore da giardino", "prezzo":"19", "img":"https://picsum.photos/200?r"},
+    {"name":"dalia", "categoria":"fiore da giardino", "prezzo":"21", "img":"https://picsum.photos/200?r"},
+
+    {"name":"orchidea", "categoria":"fiore da casa", "prezzo":"25", "img":"https://picsum.photos/200?r"},
+    {"name":"gardenia", "categoria":"fiore da casa", "prezzo":"23", "img":"https://picsum.photos/200?r"},
+    {"name":"peonia", "categoria":"fiore da casa", "prezzo":"22", "img":"https://picsum.photos/200?r"},
+    {"name":"loto", "categoria":"fiore da casa", "prezzo":"30", "img":"https://picsum.photos/200?r"},
+    {"name":"camelia", "categoria":"fiore da casa", "prezzo":"24", "img":"https://picsum.photos/200?r"},
+
+    {"name":"rosa", "categoria":"fiore da balcone", "prezzo":"20", "img":"https://picsum.photos/200?r"},
+    {"name":"tulipano", "categoria":"fiore da balcone", "prezzo":"15", "img":"https://picsum.photos/200?r"},
+    {"name":"lavanda", "categoria":"fiore da balcone", "prezzo":"14", "img":"https://picsum.photos/200?r"},
+    {"name":"viola", "categoria":"fiore da balcone", "prezzo":"11", "img":"https://picsum.photos/200?r"},
+    {"name":"anemone", "categoria":"fiore da balcone", "prezzo":"16", "img":"https://picsum.photos/200?r"},
+
+
+    {"name":"aloe vera", "categoria":"pianta medicinale", "prezzo":"18", "img":"https://picsum.photos/200"},
+    {"name":"lavanda", "categoria":"pianta medicinale", "prezzo":"14", "img":"https://picsum.photos/200"},
+    {"name":"echinacea", "categoria":"pianta medicinale", "prezzo":"20", "img":"https://picsum.photos/200"},
+    {"name":"menta", "categoria":"pianta medicinale", "prezzo":"12", "img":"https://picsum.photos/200"},
+    {"name":"melissa", "categoria":"pianta medicinale", "prezzo":"13", "img":"https://picsum.photos/200"},
+
+    {"name":"cactus", "categoria":"pianta grassa", "prezzo":"12", "img":"https://picsum.photos/200"},
+    {"name":"echeveria", "categoria":"pianta grassa", "prezzo":"14", "img":"https://picsum.photos/200"},
+    {"name":"crassula", "categoria":"pianta grassa", "prezzo":"19", "img":"https://picsum.photos/200"},
+    {"name":"sedum", "categoria":"pianta grassa", "prezzo":"11", "img":"https://picsum.photos/200"},
+    {"name":"agave", "categoria":"pianta grassa", "prezzo":"22", "img":"https://picsum.photos/200"},
+
+    {"name":"rosmarino", "categoria":"pianta aromatica", "prezzo":"10", "img":"https://picsum.photos/200"},
+    {"name":"basilico", "categoria":"pianta aromatica", "prezzo":"9", "img":"https://picsum.photos/200"},
+    {"name":"salvia", "categoria":"pianta aromatica", "prezzo":"11", "img":"https://picsum.photos/200"},
+    {"name":"timo", "categoria":"pianta aromatica", "prezzo":"8", "img":"https://picsum.photos/200"},
+    {"name":"origano", "categoria":"pianta aromatica", "prezzo":"10", "img":"https://picsum.photos/200"}
+    
+  ]
+  

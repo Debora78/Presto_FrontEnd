@@ -1,7 +1,7 @@
 :root{
     --color-p: rgb( 250, 253, 230); /* Bianco Caldo per Sfondo */
     --color-po: rgba(245, 244, 244, 0.397); /* Bianco Caldo per Sfondo trasparente */
-    --color-t: rgb( 85, 107, 47);   /* Verde Oliva Scuro per Titolo Principale e testi*/
+    --color-t: rgba(43, 16, 58, 0.76);   /* Verde Oliva Scuro per Titolo Principale e testi*/
     --color-btn: rgb( 226, 114, 91);   /* Terracotta per bottoni */
     --color-link: rgb( 176, 224, 230);   /* Blu polvere per link */
     --color-s: rgb( 169, 189, 191);   /*Verde Salvia Denaturato secondario */
@@ -45,7 +45,7 @@ nav{
 }
 
 .testo{
-    color: var(--color-link);
+    color: var(--color-t);
     font-weight: bold;
 }
 
@@ -192,6 +192,11 @@ header{
     border: 2px solid var(--color-a);
     border-radius: 10px;
     text-align: center;
+ }
+
+ /* Margine superiore per il contenitore pagina prodotti */
+ .contenitore-prod{
+  margin-top: 15vh;
  }
 
 
