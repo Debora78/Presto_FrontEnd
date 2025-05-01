@@ -36,14 +36,14 @@ function createCards(array) {
     articlesWrapper.innerHTML = ""; //svuoto il contenitore dalle cards vecchie per poi riempirlo con le nuove cards
     array.forEach((el)=>{
         let div = document.createElement("div");
-        div.classList.add("col-12", "col-md-3", "mt-5");
+        div.classList.add("col-12", "col-lg-3","col-md-4", "mt-5");
         div.innerHTML = 
         `       <div class="card">
                   <img src=${el.img} class="card-img-top" alt="img delle cards">
                   <div class="card-body">
                     <h5 class="card-title">${el.name}</h5>
                     <p class="card-text">Categoria: ${el.categoria}.</p>
-                    <p class="card-text">Prezzo: ${el.prezzo}.</p>
+                    <p class="card-text">Prezzo: ${el.prezzo}€.</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                   </div>
                 </div>
@@ -65,8 +65,8 @@ function createCards(array) {
         //la map() crea un clone del mio array in el mi ritorna tutti gli elementi e aggiungendo .categoria mi ritorna solo le categorie
         let categories = data.map((el) => el.categoria) 
         let uniqueCategories = [];
-
-        categories.forEach( (singolaCategoria) => {
+        //* Ordino le categorie per prezzo decrescente ed essendo categories un oggetto devo fare .prezzo per accedere a quella proprieta'
+        categories.sort((a,b)=>b.prezzo-a.prezzo).forEach( (singolaCategoria) => {
             if(!uniqueCategories.includes(singolaCategoria)){
                 uniqueCategories.push(singolaCategoria);
             }
@@ -89,47 +89,50 @@ function createCards(array) {
     setCategory();
 
 
-    //* FILTRO PER CATEGORIA
+    //! FILTRO PER CATEGORIA
 
     let formCheckInputs = document.querySelectorAll(".form-check-input")
 
-    function filterByCategory(){
+    function filterByCategory(array){
         //! Array.form() converte qualcosa di simile ad un array (es: insieme di coppie di valori)in un vero e proprio array (es: una nodelist ->in un array) per poter accedere ai metodi degli array
         let radioBtns = Array.from(formCheckInputs); 
         //* find() ritorna il primo elemento dell'array che soddisfa la condizione (condizione true)
         let btnChecked = radioBtns.find((radioBtn) => radioBtn.checked == true);  
-        console.log(btnChecked.id);
+        // console.log(btnChecked.id);
 
         //*Con questo if() se l'utente scegli "Tutte le categorie " che ha come id "All"  allora mosta l'array originale con tutti i dati (data), altrimenti mostra le cards con i dati filtrati
         if (btnChecked.id == "All"){
-            createCards(data)
-            
+            // createCards(data)
+            return array
         }else{
-            let filtered = data.filter((el) => el.categoria == btnChecked.id);
-            console.log(filtered);
-            createCards(filtered);
+            let filtered = array.filter((el) => el.categoria == btnChecked.id);
+            // console.log(filtered);
+            // createCards(filtered);
+            return filtered //per far uscire dalla funzione il risultato  da poter passare alle altre funzioni dei filtri
 
         }
 
-        //!Quando lancio la funzione per creare le card passo la variabile filtered che contiene i dati filtrati e non l'array originale (data ) così mi mostra solo le cards di una specifica categoria scelta con il checkbox
+        //*Quando lancio la funzione per creare le card passo la variabile filtered che contiene i dati filtrati e non l'array originale (data ) così mi mostra solo le cards di una specifica categoria scelta con il checkbox
          createCards(filtered);
 
     }
         formCheckInputs.forEach( (radio) => {
             radio.addEventListener("input", () => {
-                filterByCategory();
+                // filterByCategory();
+                globalFilter()
+               
             })
 
             })
 
 
-            //CREAZIONE PREZZO DINAMICO
+            //!CREAZIONE PREZZO DINAMICO
           let inputRangePrice = document.querySelector("#inputRangePrice"); 
           let labelPrice = document.querySelector("#labelPrice"); 
 
           function setMinMaxPrice() {
             let mapped = data.map((el) => el.prezzo);
-            console.log(mapped);
+            // console.log(mapped);
 
             //* Math.max() e Math.min() ritorna il valore piu grande di un insieme di valori ed accetta solo valori numerici e non array quindi utilizzo lo spread operator (...) per distruggere l'array e ricavare solo i singoli elementi all'interno dell'array
             let prezzoMax = Math.max(...mapped);
@@ -147,31 +150,88 @@ function createCards(array) {
 
           setMinMaxPrice();
 
-          //FILTRO PER PREZZO
-          function filterByPrice(){
-            let filtered = data.filter((el) => el.prezzo <= inputRangePrice.value);
+          //!FILTRO PER PREZZO
+          //Inserisco un parametro formale nella funzione che sarà l'array che passerò per essere filtrato e non più l'array originale (data)
+          function filterByPrice(array){
+            let filtered = array.filter((el) => el.prezzo <= Number(inputRangePrice.value))
             //Lancio la funzione createCards con i dati filtrati (anche se la variabile si chiama uguale anche nelle altre funzioni essendo all'interno di questa funzione si riferisce alla funzione di creazione poiché ha uno scope locale)
-            createCards(filtered);
+            // createCards(filtered);
+            return filtered
           }
         //   inputRangePrice è un oggetto (elemento html portato in JS)
           inputRangePrice.addEventListener("input", () => {
             //*imposto il testo del pallino della range bar con il prezzo scelto dall'utente in quel momento rendendo dinamico il testo che si aggiorna in tempo reale ogni volta che scatta l'evento.
-            labelPrice.innerHTML = inputRangePrice.value;
-            filterByPrice();
+            //All’avvio la barra mostra il prezzo massimo con etichetta chiara.
+            //Quando l’utente sposta la barra, l’etichetta si aggiorna in tempo reale con il valore attuale selezionato mostrando già la valuta € e dopo il prezzo .00.
+            labelPrice.innerHTML =  `Prezzo massimo: €${Number(inputRangePrice.value).toFixed(2)}`;
+            // filterByPrice();
+            globalFilter()
           })
 
 
-          //FILTRO PER PAROLA
+          //!FILTRO PER PAROLA
           let inputWord = document.querySelector("#inputWord");
           
-          function filterByWord(){
-              let filtered = data.filter((el)=>el.name.includes.toLowerCase(inputWord.value.toLowerCase));
-              createCards(filtered);
+          function filterByWord(array){
+              let filtered = array.filter((el)=>el.name.toLowerCase().includes(inputWord.value.toLowerCase()));
+              // createCards(filtered);
+              return filtered
             }
             
             inputWord.addEventListener("input", () => {
-              filterByWord()
+              // console.log(inputWord.value);
+              // filterByWord()
+              globalFilter()
             })
+
+
+            //! FUNZIONE GLOBAL FILTER
+
+            //!Passo il globalFilter() a tutte le funzioni dei filtri così indipendemente dall'ordini in cui l'utente li utiizzerà funzioneranno tutti.
+
+            function globalFilter(){
+              // Al primo filtro filterByCategory passo data perche mi serve l'array originale
+
+              //filterByCategory(data);
+              let resultFilteredByCategory = filterByCategory(data);
+
+                //La funzione richiede un parametro e all'interno delle parentesi di filterByPrice() inserisco la variabile che contiene il risultato del primo filtro cioè(resultFilteredByCategory)
+                let resultFilteredByPrice = filterByPrice(resultFilteredByCategory);
+
+                //La funzione richiede un parametro e all'interno delle parentesi di filterByWord() inserisco la variabile che contiene il risultato del primo e del secondo filtro cioè(resultFilteredByPrice)
+                let resultFilteredByWord = filterByWord(resultFilteredByPrice);
+
+                  // Controllo se l'utente ha applicato almeno un filtro
+                let radioBtns = Array.from(document.querySelectorAll(".form-check-input"));
+                let categorySelected = radioBtns.find((radioBtn) => radioBtn.checked && radioBtn.id !== "All");
+                let priceSelected = inputRangePrice.value != inputRangePrice.max;
+                let wordTyped = inputWord.value.trim() !== "";
+
+                let anyFilterUsed = categorySelected || priceSelected || wordTyped;
+
+                
+                //* Nascondi il messaggio "Nessun risultato" inizialmente
+                document.getElementById("noResultsMessage").style.display = "none";
+
+                //* Nascondi tutte le card esistenti prima di aggiungere i nuovi risultati
+                document.getElementById("articlesWrapper").innerHTML = "";
+
+                //Con questa condizione in caso non ci siano prodotti che corrispondano alla ricerca mostro un messagio per dare una esperienza utente migliore
+                if (resultFilteredByWord.length === 0 && anyFilterUsed){
+                //* Se non ci sono risultati, mostra il messaggio di errore
+                document.getElementById("noResultsMessage").style.display = "block";
+  
+                }else{
+
+                  // Se ci sono risultati, nascondi il messaggio di errore
+                  document.getElementById("noResultsMessage").style.display = "none"; 
+                   // E aggiungi le card dei prodotti filtrati nel div #articlesWrapper
+                  //La funzione richiede un parametro e all'interno delle parentesi di createCards() inserisco la variabile che contiene il risultato del primo, del secondo e del terzo filtro cioè(resultFilteredByWord)
+                  createCards(resultFilteredByWord);
+
+                  
+                }
+            }
 
 
 

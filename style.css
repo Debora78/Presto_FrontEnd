@@ -199,7 +199,37 @@ header{
   margin-top: 15vh;
  }
 
+ /* PAGINA PRODOTTI */
+ .box-filters{
+    padding: 50px ;
+    background-color: rgba(117, 145, 108, 0.726) ;
+    border-radius: 20px;
+    position: sticky;
+    top: 50px;
 
+ }
+
+ /* MESSAGGIO DI ALLERT PER I PRODOTTI NON DISPONIBILI */
+/* Stili per le card */
+.cardMessage {
+  border: 1px solid #ccc; 
+  padding: 1rem; 
+  margin: 1rem;
+  background-color: #f9f9f9; /* Colore di sfondo delle card */
+  border-radius: 5px; /* Angoli arrotondati */
+  text-align: center;
+}
+
+/* Stile per il messaggio "Nessun risultato" */
+#noResultsMessage {
+  color: red; /* Colore rosso per il messaggio */
+  display: none; /* Nasconde il messaggio inizialmente */
+  font-weight: bold; /* Testo in grassetto */
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Puoi aggiungere più stili per personalizzare ulteriormente */
 
 
 
