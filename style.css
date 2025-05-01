@@ -244,8 +244,14 @@ header{
         border-radius: 0px, 0px, 10px, 10px;
         backdrop-filter: blur(7px);
         background-color:  rgba(169, 189, 191, 0.301);
+        
 
-}
+      }
+
+    .testo{
+        color: var(--color-p);
+        font-weight: bold;
     }
+  }
     
   
