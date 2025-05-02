@@ -11,8 +11,8 @@
     {"name":"loto", "categoria":"fiore da casa", "prezzo":"30", "img":"./media/img-cards-products/Loto.jpg"},
     {"name":"camelia", "categoria":"fiore da casa", "prezzo":"24", "img":"./media/img-cards-products/Camelia.jpg"},
 
-    {"name":"rosa", "categoria":"fiore da balcone", "prezzo":"20", "img":"https://picsum.photos/200?r"},
-    {"name":"tulipano", "categoria":"fiore da balcone", "prezzo":"15", "img":"https://picsum.photos/200?r"},
+    {"name":"rosa", "categoria":"fiore da balcone", "prezzo":"20", "img":"./media/img-cards-products/Rosa.jpg"},
+    {"name":"tulipano", "categoria":"fiore da balcone", "prezzo":"15", "img":"./media/img-cards-products/Tulipano.jpg"},
     {"name":"lavanda", "categoria":"fiore da balcone", "prezzo":"14", "img":"https://picsum.photos/200?r"},
     {"name":"viola", "categoria":"fiore da balcone", "prezzo":"11", "img":"https://picsum.photos/200?r"},
     {"name":"anemone", "categoria":"fiore da balcone", "prezzo":"16", "img":"https://picsum.photos/200?r"},

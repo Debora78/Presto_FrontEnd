@@ -127,5 +127,33 @@ products.forEach( (product, i) => { //la i l'indice del foreach che mi serve per
   }
     
   })
+
+  
+//  Messaggio di successo al click del bottone Subscribe
+//DOMContentLoaded -> Evento che viene lanciato quando il DOM viene caricato
+document.addEventListener("DOMContentLoaded", function () {
+  const button1 = document.querySelector("#subscribe-button1");
+  const message1 = document.querySelector("#success-message1");
+  const emailInput1 = document.querySelector(".formNewsletterEmail1");
+
+  button.addEventListener("click", function () {
+    //Mostra il messaggio di successo
+    message1.classList.remove("d-none");
+
+    //Disabilita il bottone dopo averlo premuto
+    button1.disabled = true;
+    button1.innerText = "Registrato";
+    
+    //Pulisco il campo email dopo aver premuto il bottone
+    emailInput1.value = "";
+    
+
+    //Rimuovi il messaggio dopo 3 secondi
+    setTimeout(function () {
+      message1.classList.add("d-none");
+    }, 3000);
+  });
+});
+
  
   
