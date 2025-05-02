@@ -238,8 +238,40 @@ document.addEventListener("DOMContentLoaded", function () {
   const button = document.querySelector("#subscribe-button");
   const message = document.querySelector("#success-message");
   const emailInput = document.querySelector(".formNewsletterEmail");
+  const errorMessage = document.querySelector(".error-message");
+
 
   button.addEventListener("click", function () {
+   //Verifica se l'input email non contiene spazi vuoti al suo interno (trim()elimina gli spazi vuoti)
+    const email = emailInput.value.trim();
+
+    // Nascondi messaggi prima di ogni operazione
+    message.classList.add("d-none");
+    errorMessage.classList.add("d-none");
+
+     // Verifica se l'email è vuota
+     if (email === "") {
+      errorMessage.textContent = "Per favore, inserisci una email.";
+      errorMessage.classList.remove("d-none"); // Mostra il messaggio di errore
+      return; // Interrompe l'esecuzione del resto del codice
+    }
+
+    // Regex per validare la forma dell'email
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    // Controlla se l'email è valida
+    if (!emailRegex.test(email)) {
+      errorMessage.textContent = "Per favore, inserisci un'email valida.";
+      errorMessage.classList.remove("d-none"); // Mostra il messaggio di errore
+
+      // Svuota il campo email per permettere un nuovo tentativo
+      emailInput.value = "";
+
+      return; // Interrompe l'esecuzione del resto del codice
+    }
+
+
+
     //Mostra il messaggio di successo
     message.classList.remove("d-none");
 
