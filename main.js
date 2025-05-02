@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const message1 = document.querySelector("#success-message1");
   const emailInput1 = document.querySelector(".formNewsletterEmail1");
 
-  button.addEventListener("click", function () {
+  button1.addEventListener("click", function () {
     //Mostra il messaggio di successo
     message1.classList.remove("d-none");
 
