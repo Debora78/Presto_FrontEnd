@@ -13,28 +13,28 @@
 
     {"name":"rosa", "categoria":"fiore da balcone", "prezzo":"20", "img":"./media/img-cards-products/Rosa.jpg"},
     {"name":"tulipano", "categoria":"fiore da balcone", "prezzo":"15", "img":"./media/img-cards-products/Tulipano.jpg"},
-    {"name":"lavanda", "categoria":"fiore da balcone", "prezzo":"14", "img":"https://picsum.photos/200?r"},
-    {"name":"viola", "categoria":"fiore da balcone", "prezzo":"11", "img":"https://picsum.photos/200?r"},
-    {"name":"anemone", "categoria":"fiore da balcone", "prezzo":"16", "img":"https://picsum.photos/200?r"},
+    {"name":"lavanda", "categoria":"fiore da balcone", "prezzo":"14", "img":"./media/img-cards-products/Lavanda.jpg"},
+    {"name":"viola", "categoria":"fiore da balcone", "prezzo":"11", "img":"./media/img-cards-products/Viola.jpg"},
+    {"name":"anemone", "categoria":"fiore da balcone", "prezzo":"16", "img":"./media/img-cards-products/Anemone.jpg"},
 
 
-    {"name":"aloe vera", "categoria":"pianta medicinale", "prezzo":"18", "img":"https://picsum.photos/200"},
-    {"name":"lavanda", "categoria":"pianta medicinale", "prezzo":"14", "img":"https://picsum.photos/200"},
-    {"name":"echinacea", "categoria":"pianta medicinale", "prezzo":"20", "img":"https://picsum.photos/200"},
-    {"name":"menta", "categoria":"pianta medicinale", "prezzo":"12", "img":"https://picsum.photos/200"},
-    {"name":"melissa", "categoria":"pianta medicinale", "prezzo":"13", "img":"https://picsum.photos/200"},
+    {"name":"aloe vera", "categoria":"pianta medicinale", "prezzo":"18", "img":"./media/img-cards-products/AloeVera.jpg"},
+    {"name":"camomilla", "categoria":"pianta medicinale", "prezzo":"10", "img":"./media/img-cards-products/Camomilla.jpg"},
+    {"name":"echinacea", "categoria":"pianta medicinale", "prezzo":"20", "img":"./media/img-cards-products/Echinacea.jpg"},
+    {"name":"menta", "categoria":"pianta medicinale", "prezzo":"12", "img":"./media/img-cards-products/Menta.jpg"},
+    {"name":"melissa", "categoria":"pianta medicinale", "prezzo":"13", "img":"./media/img-cards-products/Melissa.jpg"},
 
-    {"name":"cactus", "categoria":"pianta grassa", "prezzo":"12", "img":"https://picsum.photos/200"},
-    {"name":"echeveria", "categoria":"pianta grassa", "prezzo":"14", "img":"https://picsum.photos/200"},
-    {"name":"crassula", "categoria":"pianta grassa", "prezzo":"19", "img":"https://picsum.photos/200"},
-    {"name":"sedum", "categoria":"pianta grassa", "prezzo":"11", "img":"https://picsum.photos/200"},
-    {"name":"agave", "categoria":"pianta grassa", "prezzo":"22", "img":"https://picsum.photos/200"},
+    {"name":"cactus", "categoria":"pianta grassa", "prezzo":"12", "img":"./media/img-cards-products/Cactus.jpg"},
+    {"name":"echeveria", "categoria":"pianta grassa", "prezzo":"14", "img":"./media/img-cards-products/Echeveria.jpg"},
+    {"name":"crassula", "categoria":"pianta grassa", "prezzo":"19", "img":"./media/img-cards-products/Crassula.jpg"},
+    {"name":"sedum", "categoria":"pianta grassa", "prezzo":"11", "img":"./media/img-cards-products/Sedum.jpg"},
+    {"name":"agave", "categoria":"pianta grassa", "prezzo":"22", "img":"./media/img-cards-products/Agave.jpg"},
 
-    {"name":"rosmarino", "categoria":"pianta aromatica", "prezzo":"10", "img":"https://picsum.photos/200"},
-    {"name":"basilico", "categoria":"pianta aromatica", "prezzo":"9", "img":"https://picsum.photos/200"},
-    {"name":"salvia", "categoria":"pianta aromatica", "prezzo":"11", "img":"https://picsum.photos/200"},
-    {"name":"timo", "categoria":"pianta aromatica", "prezzo":"8", "img":"https://picsum.photos/200"},
-    {"name":"origano", "categoria":"pianta aromatica", "prezzo":"10", "img":"https://picsum.photos/200"}
+    {"name":"rosmarino", "categoria":"pianta aromatica", "prezzo":"10", "img":"./media/img-cards-products/Rosmarino.jpg"},
+    {"name":"basilico", "categoria":"pianta aromatica", "prezzo":"9", "img":"./media/img-cards-products/Basilico.jpg"},
+    {"name":"salvia", "categoria":"pianta aromatica", "prezzo":"11", "img":"./media/img-cards-products/Salvia.jpg"},
+    {"name":"timo", "categoria":"pianta aromatica", "prezzo":"8", "img":"./media/img-cards-products/Timo.jpg"},
+    {"name":"origano", "categoria":"pianta aromatica", "prezzo":"10", "img":"./media/img-cards-products/Origano.jpg"}
     
   ]
   
